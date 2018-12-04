@@ -59,7 +59,7 @@ class Search extends Component {
           <MenuItem value={10} primaryText="10" />
           <MenuItem value={15} primaryText="15" />
           <MenuItem value={30} primaryText="30" />
-          <MenuItem value={30} primaryText="30" />
+          <MenuItem value={30} primaryText="50" />
         </SelectField>
         <br />
         {this.state.images.length > 0 ? (
