@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "ajv": "^6.10.0",
     "axios": "^0.18.0",
+    "fsevents": "^2.0.6",
     "material-ui": "^0.20.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "watchman": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,5 +26,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "jest-enzyme": "^7.0.2"
+  }
 }

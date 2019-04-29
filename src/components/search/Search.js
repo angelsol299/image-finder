@@ -39,7 +39,7 @@ class Search extends Component {
   onAmountChange = (e, index, value) => this.setState({ amount: value });
 
   render() {
-    console.log(this.state.images);
+    // console.log(this.state.images);
     return (
       <div>
         <TextField
@@ -48,22 +48,24 @@ class Search extends Component {
           onChange={this.onTextChange}
           floatingLabelText="Search for images"
           fullWidth={true}
+          data-test="text-field"
         />
         <SelectField
           name="amount"
           floatingLabelText="Amount"
           value={this.state.amount}
           onChange={this.onAmountChange}
+          data-test="select-field"
         >
-          <MenuItem value={5} primaryText="5" />
-          <MenuItem value={10} primaryText="10" />
-          <MenuItem value={15} primaryText="15" />
-          <MenuItem value={30} primaryText="30" />
-          <MenuItem value={30} primaryText="50" />
+          <MenuItem value={5} primaryText="5" data-test="menu-item" />
+          <MenuItem value={10} primaryText="10" data-test="menu-item" />
+          <MenuItem value={15} primaryText="15" data-test="menu-item" />
+          <MenuItem value={30} primaryText="30" data-test="menu-item" />
+          <MenuItem value={30} primaryText="50" data-test="menu-item" />
         </SelectField>
         <br />
         {this.state.images.length > 0 ? (
-          <ImageResults images={this.state.images} />
+          <ImageResults images={this.state.images} data-test="image-results" />
         ) : null}
       </div>
     );
