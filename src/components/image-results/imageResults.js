@@ -45,7 +45,7 @@ class ImageResults extends Component {
                 </IconButton>
               }
             >
-              <img src={img.largeImageURL} alt="" />
+              <img src={img.largeImageURL} alt="" data-test="img"/>
             </GridTile>
           ))}
         </GridList>
@@ -55,7 +55,7 @@ class ImageResults extends Component {
     }
 
     const actions = [
-      <FlatButton label="Closed" primary={true} onClick={this.handleClose} />
+      <FlatButton data-test="flat-button" label="Closed" primary={true} onClick={this.handleClose} />
     ];
 
     return (

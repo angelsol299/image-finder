@@ -7,9 +7,9 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider date-test="mui-theme-provider">
         <div>
-          <NavBar />
+          <NavBar date-test="nav-bar" />
           <Search />
         </div>
       </MuiThemeProvider>
