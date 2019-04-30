@@ -25,19 +25,23 @@ class ImageResults extends Component {
     const { images } = this.props;
     if (images) {
       imageListContent = (
-        <GridList cols={3}>
+        <GridList cols={3} data-test="grid-list">
           {images.map(img => (
             <GridTile
+              data-test="grid-tile"
               title={img.tags}
               key={img.id}
               subtitle={
-                <span>
+                <span data-test="span">
                   by <strong>{img.user}</strong>
                 </span>
               }
               actionIcon={
-                <IconButton onClick={() => this.handleOpen(img.largeImageURL)}>
-                  <ZoomIn color="white" />
+                <IconButton
+                  onClick={() => this.handleOpen(img.largeImageURL)}
+                  data-test="icon-button"
+                >
+                  <ZoomIn color="white" data-test="zoom-in" />
                 </IconButton>
               }
             >
@@ -62,8 +66,14 @@ class ImageResults extends Component {
           modal={false}
           open={this.state.open}
           onRequestClose={this.handleClose}
+          data-test="dialog"
         >
-          <img src={this.state.currentImg} alt="" style={{ width: "100%" }} />
+          <img
+            src={this.state.currentImg}
+            alt=""
+            style={{ width: "100%" }}
+            data-test="image"
+          />
         </Dialog>
       </div>
     );
